@@ -1,0 +1,54 @@
+╰─ GODEBUG=http2debug=2 go run client.go
+--- Starting 5 Concurrent Requests ---
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote SETTINGS len=0
+2026/01/01 12:03:08 http2: Framer 0x14000480000: read SETTINGS len=6, settings: MAX_FRAME_SIZE=16384
+2026/01/01 12:03:08 http2: Framer 0x14000480000: read SETTINGS flags=ACK len=0
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote SETTINGS flags=ACK len=0
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote HEADERS flags=END_HEADERS stream=1 len=74
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote HEADERS flags=END_HEADERS stream=3 len=7
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote HEADERS flags=END_HEADERS stream=5 len=7
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote HEADERS flags=END_HEADERS stream=7 len=7
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote HEADERS flags=END_HEADERS stream=9 len=7
+2026/01/01 12:03:08 http2: Framer 0x14000480000: read WINDOW_UPDATE len=4 (conn) incr=16
+2026/01/01 12:03:08 http2: Framer 0x14000480000: read PING len=8 ping="\x02\x04\x10\x10\t\x0e\a\a"
+2026/01/01 12:03:08 http2: Framer 0x14000480000: wrote PING flags=ACK len=8 ping="\x02\x04\x10\x10\t\x0e\a\a"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_HEADERS stream=1 len=14
+2026/01/01 12:03:10 http2: decoded hpack field header field ":status" = "200"
+2026/01/01 12:03:10 http2: decoded hpack field header field "content-type" = "application/grpc"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_STREAM|END_HEADERS stream=1 len=24
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-status" = "0"
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-message" = ""
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_HEADERS stream=5 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field ":status" = "200"
+2026/01/01 12:03:10 http2: decoded hpack field header field "content-type" = "application/grpc"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_STREAM|END_HEADERS stream=5 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-status" = "0"
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-message" = ""
+2026/01/01 12:03:10 http2: Framer 0x1Finished Request 4
+Finished Request 3
+4000480000: read HEADERS flags=END_HEADERS stream=3 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field ":status" = "200"
+2026/01/01 12:03:10 http2: decoded hpack field header field "content-type" = "application/grpc"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_STREAM|END_HEADERS stream=3 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-status" = "0"
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-message" = ""
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_HEADERS stream=7 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field ":status" = "200"
+2026/01/01 12:03:10 http2: decoded hpack field header field "content-type" = "application/grpc"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_STREAM|END_HEADERS stream=7 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-status" = "0"
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-message" = ""
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_HEADERS stream=9 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field ":status" = "200"
+2026/01/01 12:03:10 http2: decoded hpack field header field "content-type" = "application/grpc"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read HEADERS flags=END_STREAM|END_HEADERS stream=9 len=2
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-status" = "0"
+2026/01/01 12:03:10 http2: decoded hpack field header field "grpc-message" = ""
+2026/01/01 12:03:10 http2: Framer 0x14000480000: wrote WINDOW_UPDATE len=4 (conn) incr=22
+2026/01/01 12:03:10 http2: Framer 0x14000480000: wrote PING len=8 ping="\x02\x04\x10\x10\t\x0e\a\a"
+Finished Request 2
+Finished Request 1
+Finished Request 0
+--- All requests finished in 2.036489833s ---
+2026/01/01 12:03:10 http2: Framer 0x14000480000: wrote GOAWAY len=33 LastStreamID=9 ErrCode=NO_ERROR Debug="client transport shutdown"
+2026/01/01 12:03:10 http2: Framer 0x14000480000: read PING flags=ACK len=8 ping="\x02\x04\x10\x10\t\x0e\a\a"
